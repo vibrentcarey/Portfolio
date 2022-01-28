@@ -29,7 +29,7 @@ const Project = ({ title }) => {
           <FaNodeJs className='text-3xl sm:text-4xl hover:text-primaryPink' />
         </div>
         <div data-tip="Link to the project" class="tooltip tooltip-right tooltip-accent mt-6">
-        <a class="link link-accent">Check It Out Here!</a>
+        <a class="link link-accent" href='https://hadgits.vercel.app/' target='_blank' rel='noreferrer'>Check It Out Here!</a>
         </div>
       </article>
       </AnimationOnScroll>
