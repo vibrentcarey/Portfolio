@@ -6,18 +6,17 @@ import "animate.css/animate.min.css";
 import hadgits from '../hadgits.png'
 const Project = ({ title }) => {
   return (
-    <div className="card card-bordered flex items-center w-full">
-      <div className="card-body prose w-full">
+    <div className="card card-bordered px-2 py-4 prose">
       <h2 className='text-center'>{title}</h2>
 
-    <div className='grid md:grid-cols-2 gap-10 w-full'>
+    <div className='md:grid grid-cols-2 gap-10 w-full'>
       <div class="mockup-window bg-base-300 px-1 max-h-96">
     <AnimationOnScroll animateIn="animate__zoomIn" animateOut="animate__zoomOut" >
         <img src={hadgits} alt='app demo' class="mask rounded-md" />
         </AnimationOnScroll>
       </div>
     <AnimationOnScroll animateIn="animate__slideInRight" animateOut="animate__zoomOut" >
-      <article>
+      <article className='mt-8'>
         <h3 className='mt-1 underline'>Summary</h3>
         <p>Hadgits is a Full Stack Application that allows users to keep track of their habits. It will keep track of your habit streak and allow you to add reasons and resources for keeping your streak going. </p>
         <h3 className='mt-1 underline'>Tech Stack</h3>
@@ -33,7 +32,6 @@ const Project = ({ title }) => {
         </div>
       </article>
       </AnimationOnScroll>
-    </div>
     </div>
     </div>
   );
