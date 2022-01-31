@@ -5,7 +5,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const TitleText = () => {
   return (
-    <AnimationOnScroll animateIn='animate__slideInLeft' animateOut='animate__slideOutLeft' id='about'>
+    <AnimationOnScroll animateIn='animate__slideInLeft' animateOut='animate__slideOutLeft' id='about' animateOnce>
 
       <article className='prose my-16' id='about'>
         <h2>About Me</h2>
