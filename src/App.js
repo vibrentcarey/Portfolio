@@ -29,7 +29,7 @@ function App() {
           </div>
         </section>
         <hr className='divider my-8' />
-        <section className='w-full flex flex-col items-center'>
+        <section className='w-full flex justify-center items-center'>
         <Projects />
         </section>
         <hr className='divider my-8' />
