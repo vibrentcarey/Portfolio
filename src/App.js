@@ -23,8 +23,8 @@ function App() {
         <section className='my-16'>
           <Skills />
           <div className='flex items-center justify-center m-4'>
-          <div data-tip="This links to my email" class="tooltip tooltip-accent">
-            <a class="link link-accent text-center" target="_blank" rel="noreferrer" href='mailto:brentbcarey@gmail.com'>Reach Me Here!</a>
+          <div data-tip="This links to my email" className="tooltip tooltip-accent">
+            <a className="link link-accent text-center" target="_blank" rel="noreferrer" href='mailto:brentbcarey@gmail.com'>Reach Me Here!</a>
             </div>
           </div>
         </section>

@@ -6,7 +6,7 @@ import "animate.css/animate.min.css";
 const Social = () => {
   return (
     <div className='flex items-center my-16'>
-      <div class="card card-bordered prose h-full w-full max-h-72 p-4">
+      <div className="card card-bordered prose h-full w-full max-h-72 p-4">
         <h2 className='text-center underline'>Find Me On</h2>
 
         <div className='card-body'>

@@ -5,21 +5,23 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import "animate.css/animate.min.css";
 
 const Project = ({ title, description, stack, link, image }) => {
-  console.log(image)
+
   // Map tech stack to icons
   const techStack = stack.map(tech => {
     if (tech === 'React') {
-      return <FaReact className='text-3xl sm:text-4xl hover:text-primaryPink mx-1' />
+      return <FaReact key='react' className='text-3xl sm:text-4xl mx-1' />
     } else if (tech === 'Tailwind') {
-      return <SiTailwindcss className='text-3xl sm:text-4xl hover:text-primaryPink mx-1' />
+      return <SiTailwindcss key='tailwind' className='text-3xl sm:text-4xl mx-1' />
     } else if (tech === 'TypeScript') {
-      return <SiTypescript className='text-3xl sm:text-4xl hover:text-primaryPink mx-1' />
+      return <SiTypescript key='typescript' className='text-3xl sm:text-4xl mx-1' />
     } else if (tech === 'Next') {
-      return <SiNextdotjs className='text-3xl sm:text-4xl hover:text-primaryPink mx-1' />
+      return <SiNextdotjs key='next' className='text-3xl sm:text-4xl mx-1' />
     } else if (tech === 'Node') {
-      return <FaNodeJs className='text-3xl sm:text-4xl hover:text-primaryPink mx-1' />
+      return <FaNodeJs key='node' className='text-3xl sm:text-4xl mx-1' />
     }  else if (tech === 'CSS') {
-      return <FaCss3Alt className='text-3xl sm:text-4xl hover:text-primaryPink mx-1' />
+      return <FaCss3Alt key='css' className='text-3xl sm:text-4xl mx-1' />
+    } else {
+      return null
     }
   })
   return (
@@ -27,9 +29,9 @@ const Project = ({ title, description, stack, link, image }) => {
       <h2 className='text-center'>{title}</h2>
 
       <div className='sm:grid grid-cols-2 gap-10 w-full'>
-        <div class="mockup-window bg-base-300 px-1 max-h-96">
+        <div className="mockup-window bg-base-300 px-1 max-h-96">
           <AnimationOnScroll animateIn="animate__zoomIn" animateOut="animate__zoomOut" animateOnce>
-            <img src={image} alt='app demo' class="mask rounded-md" />
+            <img src={image} alt='app demo' className="mask rounded-md" />
           </AnimationOnScroll>
         </div>
         <AnimationOnScroll animateIn="animate__slideInRight" animateOut="animate__zoomOut" animateOnce>
@@ -40,8 +42,8 @@ const Project = ({ title, description, stack, link, image }) => {
             <div className='flex w-10/12'>
               {techStack}
             </div>
-            <div data-tip="Link to the project" class="tooltip tooltip-right tooltip-accent mt-6">
-              <a class="link link-accent" href={link} target='_blank' rel='noreferrer'>Check It Out Here!</a>
+            <div data-tip="Link to the project" className="tooltip tooltip-right tooltip-accent mt-6">
+              <a className="link link-accent" href={link} target='_blank' rel='noreferrer'>Check It Out Here!</a>
             </div>
           </article>
         </AnimationOnScroll>
